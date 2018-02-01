@@ -1,5 +1,7 @@
 ## Contentful UI Extensions for Everyone :grin: :tada:
 
+:warning: IN PROGRESS!
+
 [Contentful](https://www.contentful.com/) allows users to install extensions to the web app interface so that the current user interface can be "extended" to look or do something different than what is presently available. If you aren't a developer-type, they may look intimidating to install at first but rest assured--after this workshop, you will be a UI extensions pro. :+1:
 
 #### Jump to:
