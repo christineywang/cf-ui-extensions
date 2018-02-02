@@ -63,8 +63,11 @@ Save your content type.
 In order to install the extension, we will be using the folder on our desktop that contains the two files we need for the extension:
 
 `Makefile`
+
 `extension.json`
+
 `index.html`
+
 `extension.json`
 
 Now, the next step is where it could look tricky (but it's really not!).
@@ -100,6 +103,7 @@ Open the `Makefile` file from your text editor of choice.
 Uncomment these lines at the top of the file (by removing the `#` symbol):
 
 `export CONTENTFUL_MANAGEMENT_ACCESS_TOKEN=<your token here>`
+
 `export SPACE=<id of space where you want to install this extension>`
 
 Add in your access token and space ID.
@@ -139,6 +143,8 @@ Click on _Save_ and create a new entry!
 To host the extension from Contentful (instead of your local server), type this command in your terminal:
 
 `make update-force`
+
+<br>
 
 :white_check_mark: _To see the extensions you have installed in your space, go to _Space settings_ > _Extensions_._
 
