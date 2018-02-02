@@ -1,24 +1,26 @@
 ## Contentful UI Extensions for Everyone :grin: :tada:
 
 
-[Contentful](https://www.contentful.com/) allows users to install extensions to the web app interface so that the current user interface can be "extended" to look or do something different than what is presently available. If you aren't a developer-type, they may look intimidating to install at first but rest assured--after this workshop, you will be a UI extensions pro. :+1:
+[Contentful](https://www.contentful.com/) allows users to install extensions to the web app interface so that the current user interface can be "extended" to look or do something different than what is presently available. If you aren't a developer-type, they may look intimidating to install at first but rest assured&mdash;after this workshop, you will be a UI extensions pro. :+1:
 
 #### Jump to:
 - [What is a UI extension and why do they matter?](#what-is-a-ui-extension-and-why-do-they-matter)
 - [Who can make a UI extension?](#who-can-make-a-ui-extension)
 - [Where can I find example extensions?](#where-can-i-find-example-extensions)
-- [Okay, enough of the small talk--let's install an extension!](#okay-enough-of-the-small-talk--lets-install-an-extension)
+- [Okay, enough of the small talk&mdash;let's install an extension!](#okay-enough-of-the-small-talk&mdash;lets-install-an-extension)
+- [FAQs](#faqs)
 
 <br>
 <hr>
+<br>
 
 ## What is a UI extension and why do they matter?
 
-You probably already use extensions everyday in your web browser. They allow you to customize your browsing experience and access other services outside what is native to your browser (such a  :rainbow:  picker--I have [this](https://goo.gl/xdYHW) one installed!).
+You probably already use extensions everyday in your web browser. They allow you to customize your browsing experience and access other services outside what is native to your browser (such a  :rainbow:  picker&mdash;I have [this](https://goo.gl/xdYHW) one installed!).
 
 Contentful UI extensions are slightly different because users can't just go to a "store," browse for extensions, and click a button to install the extension. Contentful require the extension code (plain HTML files) to be uploaded to Contentful in order for the user to be able to access the custom functionality. The extension code is then included in all of the code that makes up the web app (which is built on top of our Management API).
 
-Giving users the ability to customize the web app is important because Contentful doesn't always know (or can accommodate) custom use cases. Also, sometimes extensions can help fill a gap in the interface for a feature that would be very helpful for our users (and may even be on our product roadmap) but is not built yet. An example would be our slug generator, which can now be added as an _Appearance_ option for our short-text field. But did you know it was a feature that was once only available as a [UI extension](https://github.com/contentful/extensions/tree/master/samples/slug)?
+Giving users the ability to customize the web app is important because Contentful doesn't always know (or can accommodate) custom use cases. Also, sometimes extensions can help fill a gap in the interface for a feature that would be very helpful for our users (and may even be on our product roadmap) but is not built yet. An example would be our slug generator, which can now be added as an _Appearance_ option for our short-text field. But did you know it was once a feature that was only available as a [UI extension](https://github.com/contentful/extensions/tree/master/samples/slug)?
 
 <br>
 
@@ -32,15 +34,15 @@ We have a [Github repository](https://github.com/contentful/extensions) with sam
 
 <br>
 
-## Okay, enough of the small talk--let's install an extension!
+## Okay, enough of the small talk&mdash;let's install an extension!
 
 For the workshop, we will be installing a popular extension: [Rich-text editor](https://github.com/contentful/extensions/tree/master/samples/alloy-editor)
 
-This extension gives users another appearance option for the number field type.
+This extension gives users another appearance option for the long-text field type.
 
 <br>
 
-### What you will need:
+### What you will need
 - A Contentful space ID
 - Your personal access token
 - The files for the extension in a folder on your desktop
@@ -59,6 +61,7 @@ Save your content type.
 ### Preparing to install the extension
 
 In order to install the extension, we will be using the folder on our desktop that contains the two files we need for the extension:
+
 `Makefile`
 `extension.json`
 `index.html`
@@ -66,9 +69,15 @@ In order to install the extension, we will be using the folder on our desktop th
 
 Now, the next step is where it could look tricky (but it's really not!).
 
-Open the command line on your computer. The command line is basically a way for you to "command" your computer what to do without having to use the user interface that comes with your computer.
+Open the command line on your computer. For Mac users, you can find it from the Spotlight Search (`cmd` + `space-bar`) and typing in _Terminal_.
+
+The command line is basically a way for you to "command" your computer what to do without having to use the user interface that comes with your computer.
+
+<br>
 
 :white_check_mark:	_You may have heard about our CLI tools. Anytime you hear that, think "Command Line Interface."_
+
+<br>
 
 We will be using a command called `npm` to perform the next few steps. This is something that needs to be installed on your computer first in order for you to be able to access the command. The easiest way to do it is to install [Node.js](https://docs.npmjs.com/getting-started/installing-node).
 
@@ -88,13 +97,16 @@ Dependencies are other packages in npm that this project uses. In our case, this
 
 Open the `Makefile` file from your text editor of choice.
 
-Uncomment (by removing the `#` symbol) these lines at the top of the file:
+Uncomment these lines at the top of the file (by removing the `#` symbol):
+
 `export CONTENTFUL_MANAGEMENT_ACCESS_TOKEN=<your token here>`
 `export SPACE=<id of space where you want to install this extension>`
 
-Add in your access token and your space ID.
+Add in your access token and space ID.
 
 Save the file.
+
+<br>
 
 Now, from the command line, we are going to move into the folder where the files for the extension is stored and any action we make in the command line moving forward will be using the contents in this folder.
 
@@ -125,6 +137,7 @@ Click on _Save_ and create a new entry!
 
 ### Finishing touches
 To host the extension from Contentful (instead of your local server), type this command in your terminal:
+
 `make update-force`
 
 :white_check_mark: _To see the extensions you have installed in your space, go to _Space settings_ > _Extensions_._
