@@ -70,6 +70,8 @@ In order to install the extension, we will be using the folder on our desktop th
 
 `extension.json`
 
+<br>
+
 Now, the next step is where it could look tricky (but it's really not!).
 
 - Open the command line on your computer. For Mac users, you can find it from the Spotlight Search (`cmd` + `space-bar`) and typing in _Terminal_.
