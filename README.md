@@ -72,9 +72,9 @@ In order to install the extension, we will be using the folder on our desktop th
 
 Now, the next step is where it could look tricky (but it's really not!).
 
-Open the command line on your computer. For Mac users, you can find it from the Spotlight Search (`cmd` + `space-bar`) and typing in _Terminal_.
+- Open the command line on your computer. For Mac users, you can find it from the Spotlight Search (`cmd` + `space-bar`) and typing in _Terminal_.
 
-The command line is basically a way for you to "command" your computer what to do without having to use the user interface that comes with your computer.
+> The command line is basically a way for you to "command" your computer what to do without having to use the user interface that comes with your computer.
 
 <br>
 
@@ -84,11 +84,12 @@ The command line is basically a way for you to "command" your computer what to d
 
 We will be using a command called `npm` to perform the next few steps. This is something that needs to be installed on your computer first in order for you to be able to access the command. The easiest way to do it is to install [Node.js](https://docs.npmjs.com/getting-started/installing-node).
 
-Once you have npm, install our CLI tool from the terminal.
+- Once you have npm, install our CLI tool from the terminal.
 
-This is the command:
+- This is the command:
 `npm install -g contentful-extension-cli`
 
+<br>
 
 :warning:  _For new extensions, use `npm install -g contentful-cli` since the extensions CLI is getting deprecated._
 
@@ -97,66 +98,54 @@ This is the command:
 
 ### Installing the extension to your space
 
-Open the `Makefile` file from your text editor of choice.
+- Open the `Makefile` file from your text editor of choice.
 
-Uncomment these lines at the top of the file (by removing the `#` symbol):
-
+- Uncomment these lines at the top of the file (by removing the `#` symbol):
 `export CONTENTFUL_MANAGEMENT_ACCESS_TOKEN=<your token here>`
-
 `export SPACE=<id of space where you want to install this extension>`
 
-Add in your access token and space ID.
+- Add in your access token and space ID.
 
-Save the file.
+- Save the file.
 
 <br>
 
 Now, from the command line, we are going to move into the folder where the files for the extension is stored and any action we make in the command line moving forward will be using the contents in this folder.
 
-The command is:
-
+- The command is:
 `cd <yourFolder>`
 
-Once you are in the extension folder, run this command to make sure you have all the dependencies of the extension on your computer:
-
+- Once you are in the extension folder, run this command to make sure you have all the dependencies of the extension on your computer:
 `npm install`
 
-Dependencies are other packages in npm that this project uses. In our case, this project contains the `contentful-extension-cli` dependency.
+> Dependencies are other packages in npm that this project uses. In our case, this project contains the `contentful-extension-cli` dependency.
 
-Next, run this command:
-
+- Next, run this command:
 `make create`
 
-And this:
-
+- And this:
 `make serve`
 
-This will upload and serve the extension from your local server.
+- This will upload and serve the extension from Contentful.
 
 <br>
 
 ### Time to test out the extension!
-Click into the content type we previously created (with the long-text field).
-Next to the long-text field, click on _Settings_ > _Appearance_.
+- Click into the content type we previously created (with the long-text field).
+- Next to the long-text field, click on _Settings_ > _Appearance_.
 
-:boom:
+> :boom: :boom: :boom:
 
-To test out your new editor, change the _Appearance_ of your long-text field to _Rich Text Editor_.
+- To test out your new editor, change the _Appearance_ of your long-text field to _Rich Text Editor_.
 
-Click on _Save_ and create a new entry!
-
-<br>
-
-### Finishing touches
-To host the extension from Contentful (instead of your local server), type this command in your terminal:
-
-`make update-force`
+- Click on _Save_ and create a new entry!
 
 <br>
 
 :white_check_mark: _To see the extensions you have installed in your space, go to _Space settings_ > _Extensions_._
 
 <br>
+
 
 ## FAQs
 - Extensions are installed on a space-basis
