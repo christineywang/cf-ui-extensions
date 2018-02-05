@@ -89,10 +89,6 @@ Once you have npm, install our CLI tool from the terminal.
 This is the command:
 `npm install -g contentful-cli`
 
-Next, run this command to make sure you have all the dependencies of the extension on your computer:
-`npm install`
-
-Dependencies are other packages in npm that this project uses. In our case, this project contains the `contentful-extension-cli` dependency.
 
 <br>
 
@@ -117,7 +113,12 @@ Now, from the command line, we are going to move into the folder where the files
 The command is:
 `cd <yourFolder>`
 
-Once you are in the extension folder, run this command:
+Once you are in the extension folder, run this command to make sure you have all the dependencies of the extension on your computer:
+`npm install`
+
+Dependencies are other packages in npm that this project uses. In our case, this project contains the `contentful-extension-cli` dependency.
+
+Next, run this command:
 `make create`
 
 And this:
