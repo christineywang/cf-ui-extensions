@@ -87,7 +87,10 @@ We will be using a command called `npm` to perform the next few steps. This is s
 Once you have npm, install our CLI tool from the terminal.
 
 This is the command:
-`npm install -g contentful-cli`
+`npm install -g contentful-extension-cli`
+
+
+:warning:  _For new extensions, use `npm install -g contentful-cli` since the extensions CLI is getting deprecated._
 
 
 <br>
@@ -111,17 +114,21 @@ Save the file.
 Now, from the command line, we are going to move into the folder where the files for the extension is stored and any action we make in the command line moving forward will be using the contents in this folder.
 
 The command is:
+
 `cd <yourFolder>`
 
 Once you are in the extension folder, run this command to make sure you have all the dependencies of the extension on your computer:
+
 `npm install`
 
 Dependencies are other packages in npm that this project uses. In our case, this project contains the `contentful-extension-cli` dependency.
 
 Next, run this command:
+
 `make create`
 
 And this:
+
 `make serve`
 
 This will upload and serve the extension from your local server.
