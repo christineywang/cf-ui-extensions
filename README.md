@@ -110,7 +110,7 @@ We will be using a command called `npm` to perform the next few steps. This is s
 
 <br>
 
-Now, from the command line, we are going to move into the folder where the files for the extension is stored and any action we make in the command line moving forward will be using the contents in this folder.
+Now, from the command line, we are going to move into the folder where the files for the extension are stored and any action we make in the command line moving forward will be using the contents in this folder.
 
 - The command is:
 `cd <yourFolder>`
