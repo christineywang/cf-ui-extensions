@@ -18,7 +18,7 @@
 
 You probably already use extensions everyday in your web browser. They allow you to customize your browsing experience and access other services outside what is native to your browser (such a  :rainbow:  picker&mdash;I have [this](https://goo.gl/xdYHW) one installed!).
 
-Contentful UI extensions are slightly different because users can't just go to a "store," browse for extensions, and click a button to install the extension. Contentful require the extension code (plain HTML files) to be uploaded to Contentful in order for the user to be able to access the custom functionality. The extension code is then included in all of the code that makes up the web app (which is built on top of our Management API).
+Contentful UI extensions are slightly different because users can't just go to a "store," browse for extensions, and click a button to install the extension. Contentful requires the extension code (plain HTML files) to be uploaded to Contentful in order for the user to be able to access the custom functionality. The extension code is then included in all of the code that makes up the web app (which is built on top of our Management API).
 
 Giving users the ability to customize the web app is important because Contentful doesn't always know (or can accommodate) custom use cases. Also, sometimes extensions can help fill a gap in the interface for a feature that would be very helpful for our users (and may even be on our product roadmap) but is not built yet. An example would be our slug generator, which can now be added as an _Appearance_ option for our short-text field. But did you know it was once a feature that was only available as a [UI extension](https://github.com/contentful/extensions/tree/master/samples/slug)?
 
@@ -68,7 +68,7 @@ In order to install the extension, we will be using the folder on our desktop th
 
 `index.html`
 
-`extension.json`
+`package.json`
 
 <br>
 
@@ -102,13 +102,11 @@ We will be using a command called `npm` to perform the next few steps. This is s
 
 - Open the `Makefile` file from your text editor of choice.
 
-- Uncomment these lines at the top of the file (by removing the `#` symbol):
+- Add in your access token and space ID to the top two lines:
 `export CONTENTFUL_MANAGEMENT_ACCESS_TOKEN=<your token here>`
 `export SPACE=<id of space where you want to install this extension>`
 
-- Add in your access token and space ID.
-
-- Save the file.
+- Save and close the file.
 
 <br>
 
