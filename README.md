@@ -123,9 +123,6 @@ Now, from the command line, we are going to move into the folder where the files
 - Next, run this command:
 `make create`
 
-- And this:
-`make serve`
-
 - This will upload and serve the extension from Contentful.
 
 <br>
